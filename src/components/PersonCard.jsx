@@ -1,24 +1,13 @@
-import { render } from '@testing-library/react'
-import React, {Component} from 'react'
+import React from 'react'
 
-
-class PlayerCard extends React.Component {
-    constructor (props) {
-        super(props)
-        }
-    
-
-
-    render(){
-        return(
-            <div>
-                <h1>{this.props.name}</h1>
-                <p>Age: {this.props.age}</p>
-                <p>Hair Color: {this.props.hair_color}</p>    
-            </div>
-        )
-        }
-    
+const PersonCard = props => {
+    return(
+        <div>
+            <h1>{props.last_name}, {props.first_name}</h1>
+            <p>Age: {props.age} </p>
+            <p>Hair Color: {props.hair_color}</p>
+        </div>
+    )
 }
 
-export default PlayerCard
+export default PersonCard
